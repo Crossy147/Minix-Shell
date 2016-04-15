@@ -1,0 +1,35 @@
+INPUT_DIR=input
+OUTPUT_DIR=output
+EXPECTED_DIR=expected
+EXEC_DIR=exec
+PRE_DIR=pre
+POST_DIR=post
+
+BIN=bin
+
+SUITES_DIR=suites
+
+
+killall() {
+	for pstk in $(ps ax | grep $2 | grep -v grep | sed -n -e 's/^[ ]*\([0-9][0-9]*\).*/\1/p')
+	do
+		kill $1 $pstk
+	done
+}	
+
+create_test_dir() {
+	mkdir $TEST_DIR
+	cp -r $BASE_DIR/bin $TEST_DIR/bin
+	tar -xzf $BASE_DIR/teststr.tar.gz -C $TEST_DIR
+}
+
+remove_test_dir() {
+	rm -r $TEST_DIR
+}
+
+restore_test_dir() {
+	cd $BASE_DIR
+	remove_test_dir
+	create_test_dir
+}
+

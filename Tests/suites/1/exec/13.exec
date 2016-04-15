@@ -1,0 +1,11 @@
+
+
+if [ $(find $inf -type f -size +300c 2>/dev/null) ]; then
+        delay=0;
+else
+        delay=1;
+fi
+
+
+$BIN/splitter $delay < $inf |  $TESTED_SHELL 2> $errf > $outf
+

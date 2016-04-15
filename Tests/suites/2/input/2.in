@@ -1,0 +1,8 @@
+# builtin lcd
+lcd /
+pwd
+lcd home
+pwd
+lcd /etc
+pwd
+

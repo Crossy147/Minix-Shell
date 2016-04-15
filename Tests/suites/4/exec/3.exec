@@ -1,0 +1,7 @@
+
+$TESTED_SHELL < $inf 2> /dev/null >/dev/null &
+sleep 4
+ps ax | grep testerOX | grep -v grep | wc -l > $outf
+sleep 3
+ps ax | grep testerOX | grep -v grep | wc -l >> $outf
+

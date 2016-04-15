@@ -1,0 +1,320 @@
+# many redirections
+cat servers/pm/const.h > A1
+cat <A1 > A2
+cat <A1 >>A2
+cat A1 >A2
+cat <A2 > A3
+cat <A2 >>A3
+cat A2 >A3
+cat <A3 > A4
+cat <A3 >>A4
+cat A3 >A4
+cat <A4 > A5
+cat <A4 >>A5
+cat A4 >A5
+cat <A5 > A6
+cat <A5 >>A6
+cat A5 >A6
+cat <A6 > A7
+cat <A6 >>A7
+cat A6 >A7
+cat <A7 > A8
+cat <A7 >>A8
+cat A7 >A8
+cat <A8 > A9
+cat <A8 >>A9
+cat A8 >A9
+cat <A9 > A10
+cat <A9 >>A10
+cat A9 >A10
+cat <A10 > A11
+cat <A10 >>A11
+cat A10 >A11
+cat <A11 > A12
+cat <A11 >>A12
+cat A11 >A12
+cat <A12 > A13
+cat <A12 >>A13
+cat A12 >A13
+cat <A13 > A14
+cat <A13 >>A14
+cat A13 >A14
+cat <A14 > A15
+cat <A14 >>A15
+cat A14 >A15
+cat <A15 > A16
+cat <A15 >>A16
+cat A15 >A16
+cat <A16 > A17
+cat <A16 >>A17
+cat A16 >A17
+cat <A17 > A18
+cat <A17 >>A18
+cat A17 >A18
+cat <A18 > A19
+cat <A18 >>A19
+cat A18 >A19
+cat <A19 > A20
+cat <A19 >>A20
+cat A19 >A20
+cat <A20 > A21
+cat <A20 >>A21
+cat A20 >A21
+cat <A21 > A22
+cat <A21 >>A22
+cat A21 >A22
+cat <A22 > A23
+cat <A22 >>A23
+cat A22 >A23
+cat <A23 > A24
+cat <A23 >>A24
+cat A23 >A24
+cat <A24 > A25
+cat <A24 >>A25
+cat A24 >A25
+cat <A25 > A26
+cat <A25 >>A26
+cat A25 >A26
+cat <A26 > A27
+cat <A26 >>A27
+cat A26 >A27
+cat <A27 > A28
+cat <A27 >>A28
+cat A27 >A28
+cat <A28 > A29
+cat <A28 >>A29
+cat A28 >A29
+cat <A29 > A30
+cat <A29 >>A30
+cat A29 >A30
+cat <A30 > A31
+cat <A30 >>A31
+cat A30 >A31
+cat <A31 > A32
+cat <A31 >>A32
+cat A31 >A32
+cat <A32 > A33
+cat <A32 >>A33
+cat A32 >A33
+cat <A33 > A34
+cat <A33 >>A34
+cat A33 >A34
+cat <A34 > A35
+cat <A34 >>A35
+cat A34 >A35
+cat <A35 > A36
+cat <A35 >>A36
+cat A35 >A36
+cat <A36 > A37
+cat <A36 >>A37
+cat A36 >A37
+cat <A37 > A38
+cat <A37 >>A38
+cat A37 >A38
+cat <A38 > A39
+cat <A38 >>A39
+cat A38 >A39
+cat <A39 > A40
+cat <A39 >>A40
+cat A39 >A40
+cat <A40 > A41
+cat <A40 >>A41
+cat A40 >A41
+cat <A41 > A42
+cat <A41 >>A42
+cat A41 >A42
+cat <A42 > A43
+cat <A42 >>A43
+cat A42 >A43
+cat <A43 > A44
+cat <A43 >>A44
+cat A43 >A44
+cat <A44 > A45
+cat <A44 >>A45
+cat A44 >A45
+cat <A45 > A46
+cat <A45 >>A46
+cat A45 >A46
+cat <A46 > A47
+cat <A46 >>A47
+cat A46 >A47
+cat <A47 > A48
+cat <A47 >>A48
+cat A47 >A48
+cat <A48 > A49
+cat <A48 >>A49
+cat A48 >A49
+cat <A49 > A50
+cat <A49 >>A50
+cat A49 >A50
+cat <A50 > A51
+cat <A50 >>A51
+cat A50 >A51
+cat <A51 > A52
+cat <A51 >>A52
+cat A51 >A52
+cat <A52 > A53
+cat <A52 >>A53
+cat A52 >A53
+cat <A53 > A54
+cat <A53 >>A54
+cat A53 >A54
+cat <A54 > A55
+cat <A54 >>A55
+cat A54 >A55
+cat <A55 > A56
+cat <A55 >>A56
+cat A55 >A56
+cat <A56 > A57
+cat <A56 >>A57
+cat A56 >A57
+cat <A57 > A58
+cat <A57 >>A58
+cat A57 >A58
+cat <A58 > A59
+cat <A58 >>A59
+cat A58 >A59
+cat <A59 > A60
+cat <A59 >>A60
+cat A59 >A60
+cat <A60 > A61
+cat <A60 >>A61
+cat A60 >A61
+cat <A61 > A62
+cat <A61 >>A62
+cat A61 >A62
+cat <A62 > A63
+cat <A62 >>A63
+cat A62 >A63
+cat <A63 > A64
+cat <A63 >>A64
+cat A63 >A64
+cat <A64 > A65
+cat <A64 >>A65
+cat A64 >A65
+cat <A65 > A66
+cat <A65 >>A66
+cat A65 >A66
+cat <A66 > A67
+cat <A66 >>A67
+cat A66 >A67
+cat <A67 > A68
+cat <A67 >>A68
+cat A67 >A68
+cat <A68 > A69
+cat <A68 >>A69
+cat A68 >A69
+cat <A69 > A70
+cat <A69 >>A70
+cat A69 >A70
+cat <A70 > A71
+cat <A70 >>A71
+cat A70 >A71
+cat <A71 > A72
+cat <A71 >>A72
+cat A71 >A72
+cat <A72 > A73
+cat <A72 >>A73
+cat A72 >A73
+cat <A73 > A74
+cat <A73 >>A74
+cat A73 >A74
+cat <A74 > A75
+cat <A74 >>A75
+cat A74 >A75
+cat <A75 > A76
+cat <A75 >>A76
+cat A75 >A76
+cat <A76 > A77
+cat <A76 >>A77
+cat A76 >A77
+cat <A77 > A78
+cat <A77 >>A78
+cat A77 >A78
+cat <A78 > A79
+cat <A78 >>A79
+cat A78 >A79
+cat <A79 > A80
+cat <A79 >>A80
+cat A79 >A80
+cat <A80 > A81
+cat <A80 >>A81
+cat A80 >A81
+cat <A81 > A82
+cat <A81 >>A82
+cat A81 >A82
+cat <A82 > A83
+cat <A82 >>A83
+cat A82 >A83
+cat <A83 > A84
+cat <A83 >>A84
+cat A83 >A84
+cat <A84 > A85
+cat <A84 >>A85
+cat A84 >A85
+cat <A85 > A86
+cat <A85 >>A86
+cat A85 >A86
+cat <A86 > A87
+cat <A86 >>A87
+cat A86 >A87
+cat <A87 > A88
+cat <A87 >>A88
+cat A87 >A88
+cat <A88 > A89
+cat <A88 >>A89
+cat A88 >A89
+cat <A89 > A90
+cat <A89 >>A90
+cat A89 >A90
+cat <A90 > A91
+cat <A90 >>A91
+cat A90 >A91
+cat <A91 > A92
+cat <A91 >>A92
+cat A91 >A92
+cat <A92 > A93
+cat <A92 >>A93
+cat A92 >A93
+cat <A93 > A94
+cat <A93 >>A94
+cat A93 >A94
+cat <A94 > A95
+cat <A94 >>A95
+cat A94 >A95
+cat <A95 > A96
+cat <A95 >>A96
+cat A95 >A96
+cat <A96 > A97
+cat <A96 >>A97
+cat A96 >A97
+cat <A97 > A98
+cat <A97 >>A98
+cat A97 >A98
+cat <A98 > A99
+cat <A98 >>A99
+cat A98 >A99
+cat <A99 > A100
+cat <A99 >>A100
+cat A99 >A100
+cat <A100 > A101
+cat <A100 >>A101
+cat A100 >A101
+
+
+cat A101
+
+
+rm A1  A2  A3  A4  A5  A6  A7  A8 
+rm A9  A10  A11  A12  A13  A14  A15
+rm  A16  A17  A18  A19  A20  A21  A22 
+rm A23  A24  A25  A26  A27  A28  A29  A30 
+rm A31  A32  A33  A34  A35  A36  A37  A38 
+rm A39  A40  A41  A42  A43  A44  A45  A46 
+rm A47  A48  A49  A50  A51  A52  A53  A54 
+rm A55  A56  A57  A58  A59  A60  A61  A62 
+rm A63  A64  A65  A66  A67  A68  A69  A70 
+rm A71  A72  A73  A74  A75  A76  A77  A78 
+rm A79  A80  A81  A82  A83  A84  A85  A86 
+rm A87  A88  A89  A90  A91  A92  A93  A94 
+rm A95  A96  A97  A98  A99  A100 A101

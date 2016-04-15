@@ -1,0 +1,9 @@
+echo simple commands + splitter
+ls
+ls -a servers
+cat servers/pm/type.h
+cat servers/fs/select.h servers/pm/type.h servers/fs/select.h
+ls servers/pm/
+echo a b c
+echo i am a walrus
+sleep 1

@@ -1,0 +1,8 @@
+# builtin lls
+lls
+echo chdir to servers
+lcd servers
+lls
+echo chdir to pm
+lls
+echo done

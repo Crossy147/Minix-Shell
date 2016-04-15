@@ -1,0 +1,8 @@
+
+ps ax | grep testerOX | grep -v grep > /dev/null
+if [ $? -eq 0 ]; then
+	echo Kill left over testerOX processes before running test.
+	echo Test not run because of left over testerOX processes  > $outf
+	exit 1
+fi
+

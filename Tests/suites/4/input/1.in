@@ -1,0 +1,12 @@
+# simple zombies
+
+bin/testerOX 6 &
+bin/testerOX 2 | bin/testerOX 2 | bin/testerOX  2 | bin/testerOX 2 &
+ps ax | grep testerOX | grep -v grep | wc -l
+sleep 4
+ps ax | grep testerOX | grep -v grep | wc -l
+sleep 2
+bin/testerOX  4 &
+sleep 3
+ps ax | grep testerOX | grep -v grep | wc -l
+sleep 2

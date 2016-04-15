@@ -1,0 +1,62 @@
+simple commands + splitter
+bin
+servers
+.
+..
+.depend
+Makefile
+fs
+init
+pm
+rs
+/* If there were any type definitions local to the Process Manager, they would
+ * be here.  This file is included only for symmetry with the kernel and File
+ * System, which do have some local type definitions.
+ */
+
+#ifndef _FS_SELECT_H
+#define _FS_SELECT_H 1
+
+/* return codes for select_request_* and select_cancel_* */
+#define SEL_OK		0	/* ready */
+#define SEL_ERROR	1	/* failed */
+
+#endif
+
+/* If there were any type definitions local to the Process Manager, they would
+ * be here.  This file is included only for symmetry with the kernel and File
+ * System, which do have some local type definitions.
+ */
+
+#ifndef _FS_SELECT_H
+#define _FS_SELECT_H 1
+
+/* return codes for select_request_* and select_cancel_* */
+#define SEL_OK		0	/* ready */
+#define SEL_ERROR	1	/* failed */
+
+#endif
+
+Makefile
+alloc.c
+break.c
+const.h
+exec.c
+forkexit.c
+getset.c
+glo.h
+main.c
+misc.c
+mproc.h
+param.h
+pm.h
+proto.h
+signal.c
+table.c
+time.c
+timers.c
+trace.c
+type.h
+utility.c
+a b c
+i am a walrus

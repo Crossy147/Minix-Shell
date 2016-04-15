@@ -1,0 +1,25 @@
+# pipes - counting used descriptors
+
+ls servers/pm > test.e4.3.A
+
+cat test.e4.3.A test.e4.3.A test.e4.3.A | sort | wc
+
+echo ------------------------
+cat test.e4.3.A | sort | wc
+echo ------------------------
+cat test.e4.3.A | cat | cat | sort | cat | cat | cat | cat | cat | cat > test.e4.3.B
+
+cat  test.e4.3.B | cat | cat |cat | cat | cat |cat | cat | cat |cat > test.e4.3.C
+cat test.e4.3.C | cat | wc
+
+rm test.e4.3.A test.e4.3.B test.e4.3.C
+
+bin/fdcounter
+
+bin/fdcounter > fds.1 | bin/fdcounter | bin/fdcounter | bin/fdcounter > fds.2 | bin/fdcounter | bin/fdcounter | bin/fdcounter | bin/fdcounter > fds.3 | bin/fdcounter | bin/fdcounter | bin/fdcounter 
+ 
+cat fds.1 
+cat fds.2
+cat fds.3
+
+rm fds.1 fds.2 fds.3

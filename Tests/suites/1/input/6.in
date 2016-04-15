@@ -1,0 +1,12 @@
+# exec errors
+
+
+# non-existent
+/fosdaihfodsaijf/fdsapjfodsijfdsa/fdpsajfoidsajfoidsajfd dsaoifjodsaijfoidsa fdsaofdsoifoidsaj fdsaoifjdsoifj
+
+# no permissions
+/etc/passwd
+
+echo done.
+
+

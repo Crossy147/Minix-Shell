@@ -1,0 +1,9 @@
+# multiple pipelines per line
+
+
+bin/decho 2 a b c | cat  > f1 ; cat f1 | sort 
+
+ls servers > f1 ; cat f1 > f2 ; cat f2 > f3 ; cat f3 > f4 ; cat f4
+
+rm f1 f2 f3 f4
+

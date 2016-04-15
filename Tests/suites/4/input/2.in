@@ -1,0 +1,9 @@
+# many zombies
+
+bin/testerOX 2 | bin/testerOX 2 |bin/testerOX 2 |bin/testerOX 2 |bin/testerOX 2 & 
+bin/testerOX 2 | bin/testerOX 2 |bin/testerOX 2 |bin/testerOX 2 |bin/testerOX 2 & 
+bin/testerOX 2 | bin/testerOX 2 |bin/testerOX 2 |bin/testerOX 2 |bin/testerOX 2 & 
+
+/usr/bin/sleep 4
+
+ps ax | grep testerOX | grep -v grep | wc -l

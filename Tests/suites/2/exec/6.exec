@@ -1,0 +1,12 @@
+
+cat /dev/null > $outf
+
+echo "# builtin kill test 2" > $inf
+$BIN/catcher >> $outf &
+$BIN/catcher >> $outf &
+
+ps | grep catcher| grep -v "grep" |  sed -n -e 's/^[ ]*\([0-9][0-9]*\).*/lkill -2 \1 /p' > $inf
+
+
+$TESTED_SHELL < $inf 2> $errf >> $outf
+

@@ -1,0 +1,7 @@
+# SIGINT and background
+bin/testerOX 3 | bin/testerOX 3 |bin/testerOX 3 |bin/testerOX 3 |bin/testerOX 3 & 
+
+/bin/kill -SIGINT 0
+ps ax | grep testerOX | grep -v grep | wc -l
+sleep 4
+ps ax | grep testerOX | grep -v grep | wc -l

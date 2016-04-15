@@ -1,0 +1,15 @@
+# simple pipes
+
+ls servers/pm > test.e4.3.A
+
+cat test.e4.3.A test.e4.3.A test.e4.3.A | sort 
+
+echo ------------------------
+cat test.e4.3.A | sort | wc
+echo ------------------------
+cat test.e4.3.A | cat | cat | sort | cat | cat | cat | cat | cat | cat > test.e4.3.B
+
+cat  test.e4.3.B | cat | cat |cat | cat | cat |cat | cat | cat |cat > test.e4.3.C
+cat test.e4.3.C | cat | wc
+
+rm test.e4.3.A test.e4.3.B test.e4.3.C
