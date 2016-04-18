@@ -47,10 +47,10 @@ void unblockChildSignal() {
 	sigprocmask(SIG_UNBLOCK, &chld_block_mask, NULL);
 }
 
-void blockChildSignal() { // nie chce, żeby coś się wypisywało od dziecka w trakcie wypisywania prompta, to samo w trakcie forkowania
-	sigemptyset(&chld_block_mask); //inicjalizuje set na pusty, wyrzucając wszystkie sygnały
-	sigaddset(&chld_block_mask, SIGCHLD); //dodaje sygnał do seta
-	sigprocmask(SIG_BLOCK, &chld_block_mask, NULL); // SIG_BLOCK - unia aktualnego setu i tego w argumencie
+void blockChildSignal() { 
+	sigemptyset(&chld_block_mask); 
+	sigaddset(&chld_block_mask, SIGCHLD); 
+	sigprocmask(SIG_BLOCK, &chld_block_mask, NULL); 
 }
 
 void closePipe(int* fileDescriptor) {
@@ -94,14 +94,13 @@ void redirectWritePipe(int * writePipe) {
 	if (writePipe != NULL) {
 		dup2(writePipe[1], STDOUT_FILENO);
 		close(writePipe[0]);
-		close(writePipe[1]); //close() closes a file descriptor, so that it no longer refers to any file and may be reused
+		close(writePipe[1]); 
 	}
 }
 
 void redirectReadPipe(int * readPipe) {
 	if (readPipe != NULL) {
-		dup2(readPipe[0], STDIN_FILENO); // int dup2(int oldfd, int newfd) ->  makes newfd be the copy of oldfd, closing newfd first if necessary, but note the following:
-		close(readPipe[1]);
+		dup2(readPipe[0], STDIN_FILENO); 
 		close(readPipe[0]);
 	}
 }
@@ -127,8 +126,8 @@ void redirectInput(struct redirection **redirs) {
 	struct redirection *inputRedirection = NULL;
 	findInputRedirection(redirs, &inputRedirection);
 	if (inputRedirection != NULL) {
-		int inputFileDescriptor = open(inputRedirection->filename, O_RDONLY); //int open(const char *pathname, int flags) -> Given a pathname for a file, open() returns a file descriptor, 
-																		//a small, nonnegative integer for use in subsequent system calls
+		int inputFileDescriptor = open(inputRedirection->filename, O_RDONLY); 
+																		
 		CheckAndHandleOpenError(inputFileDescriptor, inputRedirection->filename);
 		dup2(inputFileDescriptor, STDIN_FILENO);
 		close(inputFileDescriptor);
@@ -139,15 +138,15 @@ void redirectOutput(struct redirection **redirs) {
 	struct redirection *outputRedirection = NULL;
 	findOutputRedirection(redirs, &outputRedirection);
 	if (outputRedirection != NULL) {
-		int outputFlag = O_WRONLY | O_CREAT; //O_WRONLY - open for write only, O_CREAT - create if file doesn't exist
-		 // If set, the file offset shall be set to the end of the file prior to each write : its length shall be truncated to 0, and the mode and owner shall be unchanged
+		int outputFlag = O_WRONLY | O_CREAT; 
+		 
 		if (IS_RAPPEND(outputRedirection->flags)) {
 			outputFlag |= O_APPEND;
 		}
 		else {
 			outputFlag |= O_TRUNC;
 		}
-		int outputFileDescriptor = open(outputRedirection->filename, outputFlag, S_IRUSR | S_IWUSR); // S_IRUSR - read permission, owner, S_IWUSR - write permission, owner
+		int outputFileDescriptor = open(outputRedirection->filename, outputFlag, S_IRUSR | S_IWUSR); 
 
 		CheckAndHandleOpenError(outputFileDescriptor, outputRedirection->filename);
 		dup2(outputFileDescriptor, STDOUT_FILENO);
@@ -325,12 +324,11 @@ void runCommand(const command* com, int* leftFileDescriptor, int* rightFileDescr
 
 			case 0:
 				if (isBackground) {
-					setsid(); //is used to create a new session containing a single (new) process group,
-					 //with the current process as both the session leader and the process group leader of that single process group
+					setsid(); 
 				}
 
-				//restoreDefaultSettings();
-				sigaction(SIGINT, NULL, NULL); //możliwe, że jak za drugi parametr NULLA, to ustawia domyślną
+
+				sigaction(SIGINT, NULL, NULL);
 				sigaction(SIGCHLD, NULL, NULL);
 				unblockChildSignal();
 				redirectReadPipe(leftFileDescriptor);
@@ -366,8 +364,7 @@ void handlePipelineSequence() {
 			int* rightPipe = NULL;
 			foregroundCounter = 0;
 
-			blockChildSignal(); // blokuje, żeby nie leciały sygnały podczas forkowania, np jak się kończą dzieci to jebiemnato
-
+			blockChildSignal(); 
 			for (command** com = *p; *com != NULL; com++) {
 				closePipe(leftPipe);
 				leftPipe = rightPipe;
@@ -379,10 +376,10 @@ void handlePipelineSequence() {
 				}
 				runCommand(*com, leftPipe, rightPipe, isBackground);
 			}
-			closePipe(leftPipe); //na koniec zamykam, lewy, bo będzie wejściem ostatniego i wyjściem przed, więc bez sensu
+			closePipe(leftPipe); 
 			if (!isBackground) {
-				while (foregroundCounter) { //czekam aż wszystkie z fg się zakończą
-					sigsuspend(&waitMask); //czeka na sygnał na jakiejś masce sygnałów
+				while (foregroundCounter) { 
+					sigsuspend(&waitMask); 
 				}
 			}
 			foregroundProcessesSize = 0;
@@ -413,7 +410,7 @@ int main(int argc, char *argv[]) {
 	shellSigChild.sa_flags = SA_RESTART | SA_NOCLDSTOP;
 
 	sigprocmask(SIG_BLOCK, NULL, &waitMask);
-	sigaction(SIGINT, &shellSigint, &defaultSigint); //zapisuje domyślnego siginta to defaulta i podmieniam
+	sigaction(SIGINT, &shellSigint, &defaultSigint); 
 	sigfillset(&shellSigChild.sa_mask);
 	sigaction(SIGCHLD, &shellSigChild, &defaultSigChild);
 
